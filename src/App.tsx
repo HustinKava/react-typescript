@@ -1,37 +1,20 @@
 import "./App.css";
-import { Greet } from "./components/Greet";
-import { Person } from "./components/Person";
-import { PersonList } from "./components/PersonList";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Navbar from "./navbar/Navbar";
+import Homepage from "./pages/Homepage";
+import TypingProps from "./pages/TypingProps";
 
 function App() {
-  // Creating person name that will be passed to the "Person" component
-  const personName = {
-    first: "Bruce",
-    last: "Wayne",
-  };
-
-  // Creating an array of names that will to the "PersonList" component
-  const nameList = [
-    {
-      first: "Bruce",
-      last: "Wayne",
-    },
-    {
-      first: "Clark",
-      last: "Kent",
-    },
-    {
-      first: "Princess",
-      last: "Diana",
-    },
-  ];
-
   return (
     <div className="App">
-      {/* Rendering our components and passing props to them */}
-      <Greet name="Hustin" messageCount={10} isLoggedIn={false} />
-      <Person name={personName} />
-      <PersonList names={nameList} />
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/homepage" element={<Homepage />} />
+          <Route path="/typingprops" element={<TypingProps />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
