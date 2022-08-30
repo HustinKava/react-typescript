@@ -23,3 +23,16 @@ export const Greet = ( props: GreetName ) => {
     )
 }
 ```
+
+## Basic Props
+
+In addition to the "Typing Props" lesson, we explored different prop types and how to initialize them, the code below is initializing a prop that is an array with an object inside ({}[]):
+
+```
+type PersonListProps = {
+  names: {
+    first: string;
+    last: string;
+  }[];
+};
+```
