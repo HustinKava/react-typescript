@@ -35,6 +35,18 @@ function Navbar() {
                   Typing Props
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link
+                  to="/advancedprops"
+                  className={
+                    window.location.pathname === "/advancedprops"
+                      ? "nav-link active"
+                      : "nav-link"
+                  }
+                >
+                  Advanced Props
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

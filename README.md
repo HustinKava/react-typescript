@@ -34,3 +34,34 @@ type PersonListProps = {
   }[];
 };
 ```
+
+## Advanced Props
+
+For this lesson we learned about a union of string literal types, children props, children props where the prop is a react node and optional props:
+
+```
+type StatusProps = {
+  status: "loading" | "success" | "error";
+};
+```
+
+```
+type HeadingProps = {
+  children: string;
+};
+```
+
+```
+type OscarProps = {
+  children: React.ReactNode;
+};
+```
+
+```
+type GreetName = {
+  name: string;
+  messageCount?: number;
+  isLoggedIn: boolean;
+};
+
+```

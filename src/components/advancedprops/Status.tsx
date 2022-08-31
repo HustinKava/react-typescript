@@ -1,24 +1,22 @@
 // Initializing the value type of the props status
 type StatusProps = {
-  status: string;
+  // status: string;
+  // Having the status set to a string will cause validation issues
+  // We could pass any string and typescript would not recognize that the string is invalid
+  // To fix this, we do the following:
+  status: "loading" | "success" | "error";
 };
 
 export const Status = (props: StatusProps) => {
   let message;
-  // switch (props.status) {
-  //   case props.status === "loading":
-  //     message = "C";
-  //     break;
-  //   case props.status === "success":
-  //     message = "Data fetched successfully!";
-  //     break;
-  //   case props.status === "error":
-  //     message = "Error fetching data";
-  //     break;
-  //   default:
-  //     message = "Loading...";
-  //     break;
-  // }
+
+  if (props.status === "loading") {
+    message = "Loading...";
+  } else if (props.status === "success") {
+    message = "Data fetched successfully!";
+  } else if (props.status === "error") {
+    message = "Error fetching data";
+  }
 
   return (
     <div>

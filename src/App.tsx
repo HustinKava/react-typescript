@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./navbar/Navbar";
 import Homepage from "./pages/Homepage";
 import TypingProps from "./pages/TypingProps";
+import AdvancedProps from "./pages/AdvancedProps";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/homepage" element={<Homepage />} />
           <Route path="/typingprops" element={<TypingProps />} />
+          <Route path="/advancedprops" element={<AdvancedProps />} />
         </Routes>
       </BrowserRouter>
     </div>
