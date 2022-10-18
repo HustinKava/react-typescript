@@ -7,10 +7,10 @@ type PersonProps = {
 };
 
 // Props will take the "PersonProps" variable to be validated and useable
-export const Person = (props: PersonProps) => {
+export const Person = ({ name }: PersonProps) => {
   return (
     <div>
-      {props.name.first} {props.name.last}
+      {name.first} {name.last}
     </div>
   );
 };

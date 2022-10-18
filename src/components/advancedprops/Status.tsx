@@ -7,8 +7,7 @@ type StatusProps = {
   status: "loading" | "success" | "error";
 };
 
-export const Status = (props: StatusProps) => {
-  const { status } = props;
+export const Status = ({ status }: StatusProps) => {
   let message;
 
   if (status === "loading") {

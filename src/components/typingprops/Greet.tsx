@@ -6,12 +6,12 @@ type GreetName = {
 };
 
 // Props has to have the value of the "GreetName" variable to be validated and useable
-export const Greet = (props: GreetName) => {
+export const Greet = ({ name, messageCount, isLoggedIn }: GreetName) => {
   return (
     <div>
-      {props.isLoggedIn ? (
+      {isLoggedIn ? (
         <h2>
-          Welcome {props.name}! You have {props.messageCount} unread messages
+          Welcome {name}! You have {messageCount} unread messages
         </h2>
       ) : (
         <h2>Welcome Guest</h2>

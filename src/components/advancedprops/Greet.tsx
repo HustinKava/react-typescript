@@ -7,9 +7,8 @@ type GreetName = {
 };
 
 // Props has to have the value of the "GreetName" variable to be validated and useable
-export const Greet = (props: GreetName) => {
-  // We can destructure the "messageCount" and assign it a default value of 0
-  const { name, isLoggedIn, messageCount = 0 } = props;
+// We can destructure the "messageCount" and assign it a default value of 0
+export const Greet = ({ name, isLoggedIn, messageCount = 0 }: GreetName) => {
   return (
     <div>
       {isLoggedIn ? (

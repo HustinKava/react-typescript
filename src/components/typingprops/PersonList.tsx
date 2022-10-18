@@ -6,10 +6,10 @@ type PersonListProps = {
   }[];
 };
 
-export const PersonList = (props: PersonListProps) => {
+export const PersonList = ({ names }: PersonListProps) => {
   return (
     <div>
-      {props.names.map((name, index) => {
+      {names.map((name, index) => {
         return (
           <h2 key={index}>
             {name.first} {name.last}

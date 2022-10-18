@@ -3,8 +3,7 @@ type ContainerProps = {
   styles: React.CSSProperties;
 };
 
-const Container = (props: ContainerProps) => {
-  const { styles } = props;
+const Container = ({ styles }: ContainerProps) => {
   return <div style={styles}>Text content goes here</div>;
 };
 
