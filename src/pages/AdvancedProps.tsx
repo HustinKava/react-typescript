@@ -7,6 +7,8 @@ function AdvancedProps() {
   return (
     <div>
       <Status status="loading" />
+      {/* This would throw an error as "test" is not accepted */}
+      {/* <Status status="test" /> */}
 
       {/* The "Placeholder Text" value is the children of the "Heading component" */}
       <Heading>Placeholder Text</Heading>

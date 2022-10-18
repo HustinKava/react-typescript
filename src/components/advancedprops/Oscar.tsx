@@ -6,5 +6,6 @@ type OscarProps = {
 };
 
 export const Oscar = (props: OscarProps) => {
-  return <div>{props.children}</div>;
+  const { children } = props;
+  return <div>{children}</div>;
 };
