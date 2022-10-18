@@ -59,6 +59,18 @@ function Navbar() {
                   Event Props
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link
+                  to="/styleprops"
+                  className={
+                    window.location.pathname === "/styleprops"
+                      ? "nav-link active"
+                      : "nav-link"
+                  }
+                >
+                  Style Props
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

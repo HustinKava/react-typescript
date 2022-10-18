@@ -82,3 +82,13 @@ type InputProps = {
   handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 ```
+
+## Styled Props
+
+In order to pass styles as a prop using typescript we have to set the type to be "React.CSSProperties"
+
+```
+type ContainerProps = {
+  styles: React.CSSProperties;
+};
+```

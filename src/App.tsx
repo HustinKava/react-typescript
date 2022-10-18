@@ -5,6 +5,7 @@ import Homepage from "./pages/Homepage";
 import TypingProps from "./pages/TypingProps";
 import AdvancedProps from "./pages/AdvancedProps";
 import EventProps from "./pages/EventProps";
+import StyleProps from "./pages/StyleProps";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/typingprops" element={<TypingProps />} />
           <Route path="/advancedprops" element={<AdvancedProps />} />
           <Route path="/eventprops" element={<EventProps />} />
+          <Route path="/styleprops" element={<StyleProps />} />
         </Routes>
       </BrowserRouter>
     </div>
