@@ -132,3 +132,21 @@ export const Greet = ({ name, isLoggedIn, messageCount = 0 }: GreetName) => {
   );
 };
 ```
+
+## Exported Props
+
+We can create a new file to hold all our prop types and export them:
+
+```
+export type GreetName = {
+  name: string;
+  messageCount?: number;
+  isLoggedIn: boolean;
+};
+```
+
+We can then import the correct prop type in our component file:
+
+```
+import { OscarProps } from "./Exported.types";
+```

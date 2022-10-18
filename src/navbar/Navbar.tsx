@@ -71,6 +71,18 @@ function Navbar() {
                   Style Props
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link
+                  to="/exportedprops"
+                  className={
+                    window.location.pathname === "/exportedprops"
+                      ? "nav-link active"
+                      : "nav-link"
+                  }
+                >
+                  Exported Props
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
