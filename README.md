@@ -6,6 +6,46 @@
 npx create-react-app ("projectName" or "." if you want to create it within an existing folder) --template typescript
 ```
 
+## Destructured Props
+
+We can destructure typescript props
+
+Before:
+
+```
+export const Greet = (props: GreetName) => {
+  return (
+    <div>
+      {props.isLoggedIn ? (
+        <h2>
+          Welcome {props.name}! You have {props.messageCount} unread messages
+        </h2>
+      ) : (
+        <h2>Welcome Guest</h2>
+      )}
+    </div>
+  );
+};
+```
+
+After:
+
+```
+export const Greet = ({ name, isLoggedIn, messageCount = 0 }: GreetName) => {
+  return (
+    <div>
+      {isLoggedIn ? (
+        <h2>
+          Welcome {name}! You have {messageCount} unread messages
+        </h2>
+      ) : (
+        <h2>Welcome Guest</h2>
+      )}
+    </div>
+  );
+};
+```
+
 ## Typing props
 
 When using props we have to initialize what type of value the prop holds:
