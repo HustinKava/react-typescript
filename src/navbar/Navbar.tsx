@@ -47,6 +47,18 @@ function Navbar() {
                   Advanced Props
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link
+                  to="/eventprops"
+                  className={
+                    window.location.pathname === "/eventprops"
+                      ? "nav-link active"
+                      : "nav-link"
+                  }
+                >
+                  Event Props
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

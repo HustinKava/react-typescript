@@ -65,3 +65,20 @@ type GreetName = {
 };
 
 ```
+
+## Event Props
+
+Learned about how to handle onClick and onChange events by declaring the event type:
+
+```
+type ButtonProps = {
+  handleClick: (event: React.MouseEvent<HTMLButtonElement>, id: number) => void;
+};
+```
+
+```
+type InputProps = {
+  value: string;
+  handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+};
+```
